@@ -1,24 +1,25 @@
 <img src="./header.jpg" alt="Header only used for decoration" style="width:100%" loading="lazy">
 
 
-# FILTER NAME
-SUMMARIZE THE FILTER QUICKLY HERE.
+# Shapescape Easy Glyphs
+Regolith filter that makes adding custom glyphs easier
+
 
 ## 💿 Installation
 To install the filter you can use the following:
 
 Install the filter with command:
 ```
-regolith install github.com/ShapescapeMC/PLACEHOLDER/PLACEHOLDER
+regolith install github.com/ShapescapeMC/shapescape-easy-glyphs/shapescape_easy_glyphs
 ```
 
 You can install the filter via the public BedrockOSS filter resolver by this command:
 ```
-regolith install PLACEHOLDER
+regolith install shapescape_easy_glyphs
 ```
 
 ## 📒 Documentation
-Documentation for the filter is available here: PLACEHOLDER
+Documentation for the filter is available here: https://shapescape-easy-glyphs.readthedocs.io/en/latest/
 
 You can find the documenation for all filters and tools on our organisation page https://github.com/ShapescapeMC.
 
