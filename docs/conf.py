@@ -2,11 +2,11 @@
 
 # -- Project information
 
-project = 'FILTER NAME'
+project = 'Shapescape Easy Glyphs'
 copyright = '2025, Shapescape'
 author = 'Shapescape'
 
-release = '0.1'
+release = '1.0.0'
 version = '0.1.0'
 
 # -- General configuration
