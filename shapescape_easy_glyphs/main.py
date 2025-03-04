@@ -12,7 +12,7 @@ def generate_texture():
 
 # Function to load categories from the data directory
 def load_categories():
-    categories = next(os.walk('data/hero_glyphs'))[1]
+    categories = next(os.walk('data/shapescape_easy_glyphs'))[1]
     return categories
 
 # Function to paste icons onto the glyph texture
@@ -45,7 +45,7 @@ def paste_icons():
         icon_code_out.update({e[2:]: unicode_list})
         cur_col = 0
         cur_row += 1
-    with open('data/hero_glyphs/unicodes.json', 'w', encoding='utf8') as f:
+    with open('data/shapescape_easy_glyphs/unicodes.json', 'w', encoding='utf8') as f:
         json.dump(icon_code_out, f, indent=4, ensure_ascii=False)
     glyph.save(font_path / glyph_name)
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     col = 16
     tile_scale = 31 * config["scale"]
 
-    texture_directory = 'data/hero_glyphs'
+    texture_directory = 'data/shapescape_easy_glyphs'
 
     rp_path = config["rp_path"]
     font_path = rp_path / 'font/'
