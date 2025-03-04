@@ -7,6 +7,8 @@ Settings <introduction/settings>
 Usage <introduction/usage>
 ```
 
+![](../header.jpg)
+
 # Shapescape Easy Glyphs
 Shapescape Easy Glyphs is a Regolith filter that makes adding custom glyphs easier. 
 
