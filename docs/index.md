@@ -27,4 +27,4 @@ This license ensures that the tool remains open source, while still allowing you
 You can find the all filters and tools on our organisation page [https://www.github.com/ShapescapeMC](https://www.github.com/ShapescapeMC).
 
 ## 📧 Contact
-For questions, suggestions, or support, please reach out via mail to contact@shapescape.com
+For questions, suggestions, or support, please reach out via mail to [contact@shapescape.com](mailto:contact@shapescape.com)
