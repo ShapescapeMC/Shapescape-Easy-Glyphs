@@ -2,21 +2,7 @@
 
 
 # Shapescape Easy Glyphs
-Regolith filter that makes adding custom glyphs easier
-
-
-## 💿 Installation
-To install the filter you can use the following:
-
-Install the filter with command:
-```
-regolith install github.com/ShapescapeMC/shapescape-easy-glyphs/shapescape_easy_glyphs
-```
-
-You can install the filter via the public BedrockOSS filter resolver by this command:
-```
-regolith install shapescape_easy_glyphs
-```
+Shapescape Easy Glyphs is a Regolith filter that makes adding custom glyphs easier. 
 
 ## 📒 Documentation
 Documentation for the filter is available here: https://shapescape-easy-glyphs.readthedocs.io/en/latest/
@@ -33,8 +19,3 @@ This license ensures that the tool remains open source, while still allowing you
 
 ## 📧 Contact
 For questions, suggestions, or support, please reach out via mail to contact@shapescape.com
-
-## ⚙️ About Regolith
-Regolith is an Add-on Compiler for Minecraft Bedrock Edition that allows developers to transform their add-ons non-destructively and introduce new syntax. It uses a system of "filters" to programmatically transform files as they are copied into the com.mojang folder.
-
-Learn more about Regolith here: https://github.com/Bedrock-OSS/regolith
