@@ -11,7 +11,7 @@ regolith install shapescape_easy_glyphs
 
 You can alternatively use this command:
 ```
-regolith install https://github.com/ShapescapeMC/Shapescape-Easy-Glyphs/shapescape_easy_glyphs
+regolith install github.com/ShapescapeMC/Shapescape-Easy-Glyphs/shapescape_easy_glyphs
 ```
 
 ### 2. Add filter to a profile
