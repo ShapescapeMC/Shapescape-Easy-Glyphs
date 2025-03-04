@@ -1,6 +1,8 @@
 (installation)=
 # Installation
 
+## Steps
+
 ### 1. Install the filter
 Use the following command
 ```

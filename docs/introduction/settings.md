@@ -2,6 +2,7 @@
 # Settings
 
 ## Defaults
+Here are the default settings of the filter.
 
 ```json
 {
@@ -13,13 +14,13 @@
 }
 ```
 
-### Parameters
-#### **scale**
+## Parameters
+### **scale**
 Default: 4
 
 This parameter accepts an integer value between 1 and 4, and it defines the resolution of the glyphs.
 
-#### **glyph_hex**
+### **glyph_hex**
 Default: "E1"
 
 This parameter defines the hex code for the output file. The output file follows this naming convention: font/glyph_'glyph_hex'.png. 
