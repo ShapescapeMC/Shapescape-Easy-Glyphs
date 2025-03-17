@@ -1,4 +1,5 @@
 {
+	"description": "Regolith filter that makes adding custom glyphs easier",
 	"exportData": true,
 	"filters": [
 		{
