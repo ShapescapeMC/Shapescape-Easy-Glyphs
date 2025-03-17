@@ -3,19 +3,21 @@ from PIL import Image
 import json
 import os
 import sys
+import re
 
-# Function to generate a new texture image for the glyph
+
 def generate_texture():
     glyph = Image.new('RGBA', (tile_scale * col, tile_scale * row))
     glyph.save(font_path / glyph_name)
     return glyph
 
-# Function to load categories from the data directory
+
 def load_categories():
-    categories = next(os.walk('data/shapescape_easy_glyphs'))[1]
+    categories = next(os.walk('data/hero_glyphs'))[1]
+    categories.sort()
     return categories
 
-# Function to paste icons onto the glyph texture
+
 def paste_icons():
     cur_row = 0
     cur_col = 0
@@ -25,7 +27,9 @@ def paste_icons():
 
     for e in load_categories():
         unicode_list = {}
-        for file in Path(texture_directory + '/' + e).glob('**/*.png'):
+        # Sort files using numeric prefix from the filename (e.g. "01_", "02_", etc.)
+        for file in sorted(Path(texture_directory + '/' + e).glob('**/*.png'),
+                           key=lambda f: int(re.match(r'^(\d+)_', f.stem).group(1)) if re.match(r'^(\d+)_', f.stem) else float('inf')):
             cord_x = cur_col * tile_scale
             cord_y = cur_row * tile_scale
             temp_icon = Image.open(str(file))
@@ -45,11 +49,11 @@ def paste_icons():
         icon_code_out.update({e[2:]: unicode_list})
         cur_col = 0
         cur_row += 1
-    with open('data/shapescape_easy_glyphs/unicodes.json', 'w', encoding='utf8') as f:
+    with open('data/hero_glyphs/unicodes.json', 'w', encoding='utf8') as f:
         json.dump(icon_code_out, f, indent=4, ensure_ascii=False)
     glyph.save(font_path / glyph_name)
 
-# Function to get the unicode value for a given row and column
+
 def get_uni_code(cur_row, cur_col):
     uni_x = hex(cur_row).lstrip('0x').rstrip('L')
     uni_y = hex(cur_col).lstrip('0x').rstrip('L')
@@ -60,6 +64,7 @@ def get_uni_code(cur_row, cur_col):
     unicode = '0x' + config["glyph_hex"] + str(uni_x) + str(uni_y)
     unicode = chr(int(unicode, 16))
     return unicode
+
 
 if __name__ == "__main__":
     # Default config values
@@ -84,7 +89,7 @@ if __name__ == "__main__":
     col = 16
     tile_scale = 31 * config["scale"]
 
-    texture_directory = 'data/shapescape_easy_glyphs'
+    texture_directory = 'data/hero_glyphs'
 
     rp_path = config["rp_path"]
     font_path = rp_path / 'font/'
