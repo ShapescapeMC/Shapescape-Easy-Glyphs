@@ -25,7 +25,7 @@ def paste_icons():
 
     for e in load_categories():
         unicode_list = {}
-        for file in Path(texture_directory + '/' + e).glob('**/*.png'):
+        for file in sorted([*Path(texture_directory + '/' + e).glob('**/*.png')]):
             cord_x = cur_col * tile_scale
             cord_y = cur_row * tile_scale
             temp_icon = Image.open(str(file))
