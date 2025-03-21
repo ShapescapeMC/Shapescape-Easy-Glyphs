@@ -23,7 +23,7 @@ def paste_icons():
 
     glyph = generate_texture()
 
-    for e in load_categories():
+    for e in sorted([*load_categories()]):
         unicode_list = {}
         for file in sorted([*Path(texture_directory + '/' + e).glob('**/*.png')]):
             cord_x = cur_col * tile_scale
